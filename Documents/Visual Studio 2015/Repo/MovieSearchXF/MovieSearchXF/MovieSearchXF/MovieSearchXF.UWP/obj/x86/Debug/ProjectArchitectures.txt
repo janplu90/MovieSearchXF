@@ -1,0 +1,2 @@
+C:\Users\janpl\Documents\Visual Studio 2015\Projects\MovieSearchXF\MovieSearchXF\MovieSearchXF.UWP\MovieSearchXF.UWP.csproj;x86
+C:\Users\janpl\Documents\Visual Studio 2015\Projects\MovieSearchXF\MovieSearchXF\MovieSearchXF\MovieSearchXF.csproj;neutral

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieSearchXF.PopularPage"
+             Title="Popular list">
+  <StackLayout>
+    <ActivityIndicator x:Name="ai" Color="Purple" IsRunning="true" />
+  <ListView x:Name="listview"
+            ItemsSource="{Binding MoviesModel}"
+            HasUnevenRows="True"
+            ItemSelected="Listview_OnItemSelected"
+            IsPullToRefreshEnabled="true">
+    <ListView.ItemTemplate >
+      <DataTemplate>
+        <!-->TextCell Text="{Binding Name}" -->
+        <ViewCell>
+          <Grid Padding="10,5">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"></RowDefinition>
+              <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"></ColumnDefinition>
+              <ColumnDefinition Width="40"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0"
+                   Text="{Binding NameMovieYear}"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   TextColor="#000000"
+                   LineBreakMode="TailTruncation"/>
+            <Label Grid.Row="1" Grid.Column="0"
+                   Text="{Binding CastMembers}"
+                   FontSize="Small"
+                   TextColor="#4da6ff"
+                   LineBreakMode="TailTruncation"/>
+            <Image Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"
+                   Source="{Binding ImageName}"
+                   HorizontalOptions="Start"/>
+          </Grid>
+        </ViewCell>
+
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+  </StackLayout>
+</ContentPage>
